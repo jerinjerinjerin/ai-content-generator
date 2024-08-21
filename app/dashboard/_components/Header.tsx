@@ -80,9 +80,11 @@ const Header = () => {
             </SheetContent>
           </Sheet>
         </div>
+        <Link href={'/dashboard/billing'}>
         <h2 className="bg-primary hidden lg:block p-1 rounded-full text-xs text-white px-2">
           🔥Join Membership just for Rs.50/month
         </h2>
+        </Link>
         <UserButton />
       </div>
     </div>

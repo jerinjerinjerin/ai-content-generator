@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import FormSection from '../_components/FormSection';
 import OutputSection from '../_components/OutputSection';
 import { TEMPLATE } from '../../_components/TemplateListSection';
@@ -35,6 +35,10 @@ const CreateNewContent = (props: PROPS) => {
   const { totalUsage, setTotalUsage } = useContext(TotalUsageContext);
   const { userSubscription, setUserSubscription } = useContext(UserSubscriptionContext);
   const{updateCreditUsage, setUpdateCreditUsage} = useContext(UpdateCreditUsageContext);
+
+  useEffect(() => {
+  window.scroll(0, 0)
+  },[])
 
   const GenerateAIContent = async (formData: any) => {
     if (totalUsage >= 10000 && !userSubscription) {
