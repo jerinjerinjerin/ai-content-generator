@@ -48,7 +48,7 @@ const Billing = () => {
         const options = {
             key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
             subscription_id: subId,
-            name: 'jerin application',
+            name: 'Ai Powered jerin application',
             description: 'Monthly Subscription',
             handler: async (response: any) => {
                 if (response) {
